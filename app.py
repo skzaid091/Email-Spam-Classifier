@@ -3,6 +3,7 @@ import streamlit as st
 import nltk
 import string
 from nltk.stem import PorterStemmer
+nltk.download('punkt')
 
 st.set_page_config(layout='wide')
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
