@@ -1,14 +1,13 @@
 import pickle
 import streamlit as st
 import nltk
-from nltk.corpus import stopwords
 import string
 from nltk.stem import PorterStemmer
 
 st.set_page_config(layout='wide')
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load((open('model.pkl', 'rb')))
-stop_words = stopwords.words('english')
+stop_words = nltk.corpus.stopwords.words('english')
 ps = PorterStemmer()
 
 
