@@ -7,7 +7,9 @@ from nltk.stem import PorterStemmer
 st.set_page_config(layout='wide')
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load((open('model.pkl', 'rb')))
-stop_words = nltk.corpus.stopwords.words('english')
+new_one = open("stop_items.txt", "r")
+data = new_one.read()
+stop_words = data.split("\n")
 ps = PorterStemmer()
 
 
